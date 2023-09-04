@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Workshop - 1</title>
+</head>
+<body>
+    <h1>JSON Workshop</h1>
+    <h2>Create and Display JSON</h2>
+    <div id="jsonDisplay"></div>
+
+    <script>
+        let listOfJsons = [{
+            "name" : "Rich Dad Poor Dad",
+            "Name" : "works",
+            "author" : "Robert",
+            "price" : { 
+                "key" : 200
+            },
+            "reviews" : [
+                "Good",
+                "Better",
+                "Okay"
+            ],
+        },
+        {
+            "name" : "Harry Potter",
+            "author" : "JK Rowling",
+            "price" : 200,
+            "reviews" : [
+                "Good",
+                "Better",
+                "Okay"
+            ],
+        },
+        ]
+        let displayList = document.getElementById('jsonDisplay')
+        
+        listOfJsons.forEach((json)=>{
+            // Create a list item for each property using dot notation
+            let listItem = document.createElement("li");
+            listItem.textContent = "Name: " + json.Name + " Author : " + json["author"];
+            displayList.appendChild(listItem);
+
+        })
+        
+    </script>
+
+</body>
+</html>
