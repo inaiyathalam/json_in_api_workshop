@@ -13,7 +13,6 @@
     <script>
         let listOfJsons = [{
             "name" : "Rich Dad Poor Dad",
-            "Name" : "works",
             "author" : "Robert",
             "price" : { 
                 "key" : 200
@@ -40,7 +39,7 @@
         listOfJsons.forEach((json)=>{
             // Create a list item for each property using dot notation
             let listItem = document.createElement("li");
-            listItem.textContent = "Name: " + json.Name + " Author : " + json["author"];
+            listItem.textContent = "Name: " + json.name + " Author : " + json["author"];
             displayList.appendChild(listItem);
 
         })
