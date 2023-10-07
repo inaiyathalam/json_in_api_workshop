@@ -27,7 +27,7 @@ const fetchPokemonData = () => {
         <p>Height: ${data.height / 10} m</p>
         <p>Weight: ${data.weight / 10} kg</p>
       `;
-    })
+    })          
     .catch(error => {
       pokemonInfo.innerHTML = `<p>${error.message}</p>`;
     });
